@@ -1,0 +1,1 @@
+Deploying and authenticating (Auth0) a shiny dashboard by a microservice architecture using docker-compose
