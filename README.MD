@@ -27,15 +27,15 @@ The solution contains four different (micro)services, three containerized and on
  Check the Auth0 article for more information: [Get Nginx Up and Running](https://auth0.com/blog/adding-authentication-to-shiny-server/#Step-2--Get-Nginx-Up-and-Running)
 
 ##### Create SSL certificates
-Put your SSL-certificates in the SSL folder, or create self-signed certificates for testing or development. 
+Put your SSL-certificates in the Nginx/SSL folder, or create self-signed certificates for testing or development. 
 
 ##### Adjust Nginx configuration
-If not running local, adjust the nginx.conf file by replacing the '127.0.0.1' with your own domain name or ip address.
+If not running local, adjust the nginx.conf file by replacing the '127.0.0.1' 3 times with your own domain name or ip address. The main difference between this configuraton file and the one in Auth0's article is in the location block: we do not forward traffic to localhost but to our shiny-auth0 service.
 
 > Please note that this nginx configuration is not secure and not suitable for production. Adjust your nginx configuration file using the [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
 
 ### 2. Set up auth0 and shiny-auth0
-Read the Auth0 article on [Setting up an Auth0 Account for shiny-auth0](https://auth0.com/blog/adding-authentication-to-shiny-server/#Step-3--Setting-up-an-Auth0-Account-for-shiny-auth0) Change the .env file accordingly
+Read the Auth0 article on [Setting up an Auth0 Account for shiny-auth0](https://auth0.com/blog/adding-authentication-to-shiny-server/#Step-3--Setting-up-an-Auth0-Account-for-shiny-auth0) Change the .env file accordingly, do not change the 'SHINY_HOST' to localhost but use the value 'shiny' to forward traffic to our shiny-server container. 
 
 ### (optional) add your own shiny app
 Put your own custom app in the Shiny-server folder. If you want to add extra R libraries to the container, build your own image by adjusting the [Rocker/shiny](https://hub.docker.com/r/rocker/shiny/) Dockerfile. Modify the docker-compose.yml file to use your freshly build image instead of the rocker/shiny default. 
@@ -54,6 +54,8 @@ docker-compose up
 
 
 # Troubleshooting
+<b> I'm still able to access shiny directly over port 3838 </b> 
+Only allow http/https traffic should solve the issue (I'm open for alternative solutions to this problem in this setup)
 
 
 
