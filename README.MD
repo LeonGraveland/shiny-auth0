@@ -38,7 +38,7 @@ If not running local, adjust the nginx.conf file by replacing the '127.0.0.1' wi
 Read the Auth0 article on [Setting up an Auth0 Account for shiny-auth0](https://auth0.com/blog/adding-authentication-to-shiny-server/#Step-3--Setting-up-an-Auth0-Account-for-shiny-auth0) Change the .env file accordingly
 
 ### (optional) add your own shiny app
-Put your own custom app in the Shiny-server folder. If you want to add extra R libraries to the container, please just them to the [Rocker/shiny](https://hub.docker.com/r/rocker/shiny/) Dockerfile to build your own image. Modify the docker-compose.yml file to use your freshly build image instead of the rocker/shiny default. 
+Put your own custom app in the Shiny-server folder. If you want to add extra R libraries to the container, build your own image by adjusting the [Rocker/shiny](https://hub.docker.com/r/rocker/shiny/) Dockerfile. Modify the docker-compose.yml file to use your freshly build image instead of the rocker/shiny default. 
 
 
 ### 3. Docker-compose up
@@ -48,6 +48,10 @@ docker-compose up
 ```
 
 # Reference
+- Auth0 [Adding Authentication to Shiny Server in 4 Simple Steps](https://auth0.com/blog/adding-authentication-to-shiny-server/)
+- Auth0 [Shiny-auth0](https://github.com/auth0/shiny-auth0)
+- Rocker, [Rocker Shiny](https://github.com/rocker-org/shiny)
+
 
 # Troubleshooting
 
