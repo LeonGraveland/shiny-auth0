@@ -9,7 +9,7 @@ The solution contains four different (micro)services, three containerised and on
 3. Shiny-server - Running the shiny application
 4. Auth0 - Authentication layer
 
-![Visual Overview of the microservices and the flow]('Visual Overview.png')
+![Visual Overview of the microservices and the flow](Visual%20Overview.png)
 
 
 # Getting Started
