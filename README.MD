@@ -48,8 +48,8 @@ docker-compose up
 ```
 
 # Reference
-- Auth0 [Adding Authentication to Shiny Server in 4 Simple Steps](https://auth0.com/blog/adding-authentication-to-shiny-server/)
-- Auth0 [Shiny-auth0](https://github.com/auth0/shiny-auth0)
+- Auth0, [Adding Authentication to Shiny Server in 4 Simple Steps](https://auth0.com/blog/adding-authentication-to-shiny-server/)
+- Auth0, [Shiny-auth0](https://github.com/auth0/shiny-auth0)
 - Rocker, [Rocker Shiny](https://github.com/rocker-org/shiny)
 
 
