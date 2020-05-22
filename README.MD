@@ -26,10 +26,10 @@ The solution contains four different (micro)services, three containerized and on
 ### 1. Configure Nginx
  Check the Auth0 article for more information: [Get Nginx Up and Running](https://auth0.com/blog/adding-authentication-to-shiny-server/#Step-2--Get-Nginx-Up-and-Running)
 
-#### Create SSL certificates
+##### Create SSL certificates
 Put your SSL-certificates in the SSL folder, or create self-signed certificates for testing or development. 
 
-#### Configure nginx configuration
+##### Adjust Nginx configuration
 If not running local, adjust the nginx.conf file by replacing the '127.0.0.1' with your own domain name or ip address.
 
 > Please note that this nginx configuration is not secure and not suitable for production. Adjust your nginx configuration file using the [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
